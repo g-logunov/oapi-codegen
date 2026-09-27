@@ -1613,6 +1613,8 @@ func generateUnion(outSchema *Schema, elements openapi3.SchemaRefs, discriminato
 		outSchema.HasAdditionalProperties = elementSchema.HasAdditionalProperties
 		outSchema.AdditionalPropertiesType = elementSchema.AdditionalPropertiesType
 		outSchema.ArrayType = elementSchema.ArrayType
+		outSchema.UnionElements = elementSchema.UnionElements
+		outSchema.Discriminator = elementSchema.Discriminator
 		outSchema.SkipOptionalPointer = elementSchema.SkipOptionalPointer
 		outSchema.AdditionalTypes = append(outSchema.AdditionalTypes, elementSchema.AdditionalTypes...)
 		return nil
